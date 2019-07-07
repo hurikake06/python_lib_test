@@ -7,9 +7,9 @@ class MyScraping:
 
     def __init__(self, urls):
         self.urls = urls
-        self.set_page_array()
+        self.set_pages()
 
-    def set_page_array(self):
+    def set_pages(self):
         for url in self.urls:
             html = urllib.request.urlopen(url=url)
             self.pages.append(BeautifulSoup(html, "html.parser"))
